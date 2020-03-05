@@ -19,7 +19,7 @@ Hello! I've discovered an XSS vulnerability in the following endpoint: `$0`. Bou
 ```
 generate command:
 ```
-python template.md "https://example.com?injection="><script>alert(1)</script>
+python report.py template.md "https://example.com?injection="><script>alert(1)</script>
 ```
 
 output: 
