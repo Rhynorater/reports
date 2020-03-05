@@ -19,7 +19,7 @@ Hello! I've discovered an XSS vulnerability in the following endpoint: `$0`. Bou
 ```
 generate command:
 ```
-python template.md "https://example.com?injection="><script>alert(1)</script>
+python report.py template.md "https://example.com?injection="><script>alert(1)</script>
 ```
 
 output: 
@@ -41,7 +41,7 @@ My IP address is: {$ curl ipinfo.io/ip }
 ```
 generate command:
 ```
-python template.md "https://example.com?injection="><script>alert(1)"></script>
+python report.py template.md "https://example.com?injection="><script>alert(1)"></script>
 ```
 
 output: 
@@ -63,7 +63,7 @@ You can see that it is injected on line $1 of the vulnerable page: `{$ curl -s $
 ```
 generate command:
 ```
-python template.md "https://example.com?injection="><script>alert(1)</script> 10
+python report.py template.md "https://example.com?injection="><script>alert(1)</script> 10
 ```
 
 output: 
